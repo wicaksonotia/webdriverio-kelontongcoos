@@ -1,0 +1,53 @@
+{
+  "name": "ayokelontongregressiontest",
+  "version": "1.0.0",
+  "description": "WebdriverIO Project to run AYO Kelontong app regression tests",
+  "scripts": {
+    "android.app": "wdio config/wdio.android.app.conf.ts",
+    "allure": "allure generate ./reports/allure-results && allure open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint config tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "WebdriverIO",
+    "appium",
+    "native app",
+    "android",
+    "cucumber",
+    "typescript"
+  ],
+  "author": "Sisda Amalia Utrujah",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.0.0-rc.1",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@wdio/allure-reporter": "^7.16.14",
+    "@wdio/appium-service": "^7.16.16",
+    "@wdio/cli": "^7.16.16",
+    "@wdio/cucumber-framework": "^7.16.14",
+    "@wdio/local-runner": "^7.16.16",
+    "@wdio/spec-reporter": "^7.16.14",
+    "allure-commandline": "^2.13.8",
+    "chai": "^4.3.4",
+    "chromedriver": "^98.0.1",
+    "eslint-plugin-wdio": "^7.4.2",
+    "fs-extra": "^10.0.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "wdio-chromedriver-service": "^7.2.8",
+    "wdio-cucumber-reporter": "^0.0.2",
+    "wdio-cucumberjs-json-reporter": "^4.1.4",
+    "wdio-multiple-cucumber-html-reporter": "^1.1.1",
+    "wdio-video-reporter": "^3.2.0"
+  },
+  "dependencies": {
+    "npm": "^8.3.0"
+  }
+}
