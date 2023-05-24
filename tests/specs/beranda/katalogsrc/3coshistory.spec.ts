@@ -4,21 +4,18 @@ import HistoryOrderScreen from '../../../screenobjects/beranda/katalogsrc/histor
 import DetailPembelianScreen from '../../../screenobjects/beranda/katalogsrc/detailpembelianScreen';
 import BerandaScreen from '../../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {    
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Katalog SRC$/, async () => {
     await BerandaScreen.clickKatalogSRC();
-    // await BerandaScreen.clickLanjut();
 });
 
 Then(/^I should be able to check my order history$/, async () => {
-    await StoreListScreen.page();
+    await driver.pause(5000);
     await StoreListScreen.clickLinkToOrderList();
-    await HistoryOrderScreen.page();
+    await driver.pause(5000);
     await HistoryOrderScreen.checkOrderHistory();
-    await DetailPembelianScreen.page();
-
-    // await BerandaScreen.page();
+    await driver.pause(5000);
 });

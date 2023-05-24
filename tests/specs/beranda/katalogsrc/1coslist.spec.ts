@@ -3,8 +3,8 @@ import StoreListScreen from '../../../screenobjects/beranda/katalogsrc/storelist
 import StoreScreen from '../../../screenobjects/beranda/katalogsrc/storeScreen';
 import BerandaScreen from '../../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {   
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Katalog SRC$/, async () => {
@@ -13,10 +13,8 @@ When(/^I click menu Katalog SRC$/, async () => {
 });
 
 Then(/^I should be able to see the list of categories and products$/, async () => {
-    await StoreListScreen.page();
+    await driver.pause(5000);
     await StoreListScreen.clickStore();
-    await StoreScreen.page();
+    await driver.pause(5000);
     await StoreScreen.seeCathegoryandProduct();
-
-    // await BerandaScreen.page();
 });

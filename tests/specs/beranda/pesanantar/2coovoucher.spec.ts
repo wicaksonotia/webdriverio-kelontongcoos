@@ -7,39 +7,33 @@ import DetailBelanjaScreen from '../../../screenobjects/beranda/pesanantar/detai
 import VoucherScreen from '../../../screenobjects/beranda/pesanantar/voucherScreen';
 import BerandaScreen from '../../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {    
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Pesan Antar$/, async () => {
     await BerandaScreen.clickPesanAntar();
-    // await BerandaScreen.clickLanjut();
 });
 
 Then(/^I should be able to use voucher$/, async () => {
-    // await StoreListScreen.chooseLoc();
-    await StoreListScreen.page();
+    await driver.pause(5000);
     await StoreListScreen.clickStore();
-    await StoreScreen.page();
+    await driver.pause(5000);
     await StoreScreen.clickRokok();
-    await DetailProdukScreen.page();
+    await driver.pause(5000);
     await DetailProdukScreen.makeOrderRokok();
     await DetailProdukScreen.back();
-    await DetailProdukScreen.back();
-    await StoreScreen.page();
+    await driver.pause(5000);
     await StoreScreen.clickMakanan();
-    await DetailProdukScreen.page();
+    await driver.pause(5000);
     await DetailProdukScreen.makeOrderMakanan();
-    await CartScreen.page();
+    await driver.pause(5000);
     await CartScreen.makeOrder();
     await CartScreen.accRokok();
-    await DetailBelanjaScreen.page();
+    await driver.pause(5000);
+    // await VoucherScreen.useVoucher();
+    // await VoucherScreen.selectVoucher();
     await DetailBelanjaScreen.makeOrder();
-    await DetailBelanjaScreen.checkoutPromo();
-    // await VoucherScreen.page();
-    await VoucherScreen.selectVoucher();
-    await VoucherScreen.useVoucher();
-    await DetailBelanjaScreen.page();
-
-    // await BerandaScreen.page();
+    // await DetailBelanjaScreen.checkoutPromo();
+    await driver.pause(5000);
 });

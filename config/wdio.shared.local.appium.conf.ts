@@ -22,7 +22,7 @@ config.services = (config.services ? config.services : []).concat([
                 // For more arguments see
                 // https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-appium-service
             },
-            // logPath : './',
+            logPath: './',
             // path: '/wd/hub',
         },
 

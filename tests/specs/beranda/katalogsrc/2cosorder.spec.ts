@@ -8,8 +8,8 @@ import DetailPembelianScreen from '../../../screenobjects/beranda/katalogsrc/det
 import HistoryOrderScreen from '../../../screenobjects/beranda/katalogsrc/historyOrderScreen';
 import BerandaScreen from '../../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {    
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Katalog SRC$/, async () => {
@@ -18,21 +18,21 @@ When(/^I click menu Katalog SRC$/, async () => {
 });
 
 Then(/^I should be able to make an order$/, async () => {
-    await StoreListScreen.page();
+    await driver.pause(5000);
     await StoreListScreen.clickStore();
-    await StoreScreen.page();
+    await driver.pause(5000);
     await StoreScreen.clickProduct();
-    await DetailProdukScreen.page();
+    await driver.pause(5000);
     await DetailProdukScreen.makeOrder();
-    await CartScreen.page();
+    await driver.pause(5000);
     await CartScreen.makeOrder();
-    await DetailBelanjaScreen.page();
+    await driver.pause(5000);
     await DetailBelanjaScreen.makeOrder();
     await DetailBelanjaScreen.checkOrderDetail();
-    await DetailPembelianScreen.page();
+    await driver.pause(5000);
     await DetailPembelianScreen.back();
     await DetailBelanjaScreen.checkStatusOrder();
-    await HistoryOrderScreen.page();
+    await driver.pause(5000);
 
     // await BerandaScreen.page();
 });
