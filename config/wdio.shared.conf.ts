@@ -130,15 +130,15 @@ export const config: WebdriverIO.Config = {
             outputDir: './allure-results',
             disableWebdriverStepsReporting: false,
             disableWebdriverScreenshotsReporting: false,
-            useCucumberStepReporter: false,
+            useCucumberStepReporter: true,
             addConsoleLogs: true,
         }],
-        // [video, {
-        //     outputDir: './reports/video',
-        //     saveAllVideos: true,        // If true, also saves videos for successful test cases
-        //     videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        //     videoRenderTimeout: 60000,
-        // }],
+        [video, {
+            outputDir: './reports/video',
+            saveAllVideos: true,        // If true, also saves videos for successful test cases
+            videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+            videoRenderTimeout: 60000,
+        }],
 
         //!!!ALLURE PROD!!!
         // ['allure', {
@@ -155,12 +155,12 @@ export const config: WebdriverIO.Config = {
     // ==================
     specs: [
         // './tests/features/beranda/katalogsrc/1coslist.feature'
-        './tests/features/beranda/katalogsrc/2cosorder.feature'
+        // './tests/features/beranda/katalogsrc/2cosorder.feature'
         // './tests/features/beranda/katalogsrc/3coshistory.feature'
         // './tests/features/beranda/pesanantar/1coolist.feature'
         // './tests/features/beranda/pesanantar/2coovoucher.feature'
         // './tests/features/beranda/pesanantar/3cooorder.feature'
-        // './tests/features/beranda/pesanantar/4coohistory.feature'
+        './tests/features/beranda/pesanantar/4coohistory.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -173,12 +173,12 @@ export const config: WebdriverIO.Config = {
         // <string[]> (file/dir) require files before executing features
         require: [
             // './tests/specs/beranda/katalogsrc/1coslist.spec.ts'
-            './tests/specs/beranda/katalogsrc/2cosorder.spec.ts'
+            // './tests/specs/beranda/katalogsrc/2cosorder.spec.ts'
             // './tests/specs/beranda/katalogsrc/3coshistory.spec.ts'
             // './tests/specs/beranda/pesanantar/1coolist.spec.ts'
             // './tests/specs/beranda/pesanantar/2coovoucher.spec.ts'
             // './tests/specs/beranda/pesanantar/3cooorder.spec.ts'
-            // './tests/specs/beranda/pesanantar/4coohistory.spec.ts'
+            './tests/specs/beranda/pesanantar/4coohistory.spec.ts'
         ],
         // <boolean> show full backtrace for errors
         backtrace: false,

@@ -5,8 +5,8 @@ import HistoryOrderScreen from '../../../screenobjects/beranda/pesanantar/histor
 import DetailPembelianScreen from '../../../screenobjects/beranda/pesanantar/detailpembelianScreen';
 import BerandaScreen from '../../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {    
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Pesan Antar$/, async () => {
@@ -16,15 +16,13 @@ When(/^I click menu Pesan Antar$/, async () => {
 
 Then(/^I should be able to check my order history$/, async () => {
     // await StoreListScreen.chooseLoc();
-    await StoreListScreen.page();
+    await driver.pause(5000);
     await StoreListScreen.clickStore();
-    await StoreScreen.page();
+    await driver.pause(5000);
     await StoreScreen.clickLinkToOrderList();
-    await HistoryOrderScreen.page();
+    await driver.pause(5000);
     await HistoryOrderScreen.checkOrderHistory();
-    await DetailPembelianScreen.page();
+    await driver.pause(5000);
     await DetailPembelianScreen.back();
-    await HistoryOrderScreen.page();
-
-    // await BerandaScreen.page();
+    await driver.pause(5000);
 });

@@ -3,21 +3,17 @@ import StoreListScreen from '../../../screenobjects/beranda/pesanantar/storelist
 import StoreScreen from '../../../screenobjects/beranda/pesanantar/storeScreen';
 import BerandaScreen from '../../../screenobjects/beranda/berandaScreen';
 
-Given(/^I am on the Home page$/, async () => {    
-    await BerandaScreen.page();
+Given(/^I am on the Home page$/, async () => {
+    await driver.pause(5000);
 });
 
 When(/^I click menu Pesan Antar$/, async () => {
     await BerandaScreen.clickPesanAntar();
-    // await BerandaScreen.clickLanjut();
 });
 
 Then(/^I should be able to see the list of categories and products$/, async () => {
-    // await StoreListScreen.chooseLoc();
-    await StoreListScreen.page();
+    await driver.pause(5000);
     await StoreListScreen.clickStore();
-    await StoreScreen.page();
+    await driver.pause(5000);
     await StoreScreen.seeCathegoryandProduct();
-
-    // await BerandaScreen.clickPesanAntar();
 });

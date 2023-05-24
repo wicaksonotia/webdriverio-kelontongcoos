@@ -4,7 +4,7 @@
   "description": "WebdriverIO Project to run AYO Kelontong app regression tests",
   "scripts": {
     "android.app": "wdio config/wdio.android.app.conf.ts",
-    "allure": "allure generate ./reports/allure-results && allure open",
+    "allure": "allure generate allure-results --clean && allure open",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint config tests"
   },

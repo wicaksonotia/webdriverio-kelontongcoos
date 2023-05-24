@@ -22,8 +22,8 @@ config.capabilities = [
         // 'appium:deviceName': 'Samsung A32',
         // 'appium:udid': 'RR8R30D7QVP',
         'appium:deviceName': 'Pixel 4 API Tiramisu',
+        // 'appium:udid': 'f870ac01',
         "appium:platformVersion": "12",
-        // 'appium:udid': 'ibf68luspjb6so9p',
         'appium:orientation': 'PORTRAIT',
         'appium:automationName': 'UIAutomator2',
         // The path to the app
@@ -35,7 +35,7 @@ config.capabilities = [
         //version 2.23
         // Read the reset strategies very well, they differ per platform, see
         // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
-        // 'appium:noReset': true,
+        'appium:noReset': true,
         // 'appium:fullReset': true, //false
         'appium:newCommandTimeout': 240,
         // 'autoGrantPermissions': true,
